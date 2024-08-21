@@ -52,6 +52,16 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        cream: {
+          DEFAULT: '#fffefc',
+          dark: '#faf0e6',
+        },
+        charcoal: '#282828',
+        orange: {
+          DEFAULT: '#d06d01',
+          light: '#da8619',
+          lighter: '#ecb349',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -71,6 +81,10 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        heading: ['var(--font-eurostile)', 'sans-serif'],
       },
     },
   },
