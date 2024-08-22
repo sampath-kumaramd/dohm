@@ -136,7 +136,7 @@ const ClientTestimonialsCarousel: React.FC = () => {
         </h2>
         <Carousel
           setApi={setApi}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full  mx-auto"
           opts={{
             align: 'start',
             loop: true,
@@ -150,12 +150,12 @@ const ClientTestimonialsCarousel: React.FC = () => {
             ))}
           </CarouselContent>
         </Carousel>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 items-center">
           {[...Array(count)].map((_, i) => (
             <button
               key={i}
-              className={`w-3 h-3 rounded-full mx-1 ${
-                i === current ? 'bg-gradient-to-br from-orange-light to-orange-lighter' : 'bg-gradient-to-br from-[#f7e5cf] to-[#fcf1dc]'
+              className={` rounded-full mx-1 ${
+                i === current ? 'bg-gradient-to-br from-orange-light to-orange-lighter w-4 h-4 ' : 'w-3 h-3 bg-gradient-to-br from-[#f7e5cf] to-[#fcf1dc]'
               }`}
               onClick={() => api?.scrollTo(i)}
             />

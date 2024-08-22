@@ -1,21 +1,17 @@
-'use client';
 import React from 'react';
 
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
 
 import homePageIdeaBg from '../../../public/background/home-page-idea.svg';
-import homePageIdeaMobileBg from '../../../public/background/home-page-idea.svg';
 
 const IdeaExecutionSection = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <section className="relative overflow-hidden">
       <div
         className="absolute inset-0 z-0 bg-cover bg-right w-screen bg-no-repeat"
         style={{
           backgroundImage: `url(${
-            isMobile ? homePageIdeaMobileBg.src : homePageIdeaBg.src
+            homePageIdeaBg.src
           })`,
         }}
       />

@@ -7,7 +7,6 @@ import { useMediaQuery } from 'react-responsive';
 import { Card, CardContent } from '../ui/card';
 import GradientText from '../ui/GradientText';
 
-
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -106,7 +105,9 @@ const ServicesSection: React.FC = () => {
       iconSrc: '/icons/api-icon.svg',
     },
   ];
+
   const isMobile = useMediaQuery({ maxWidth: 768 });
+
   return (
     <section className="py-16 relative overflow-hidden">
       <div
@@ -118,7 +119,7 @@ const ServicesSection: React.FC = () => {
         }}
       />
       <div className="container relative mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">
+        <h2 className="text-5xl font-bold mb-12 text-center">
           OUR
           <GradientText
             gradientColors={['#d57a0e', '#e49f34']}
@@ -127,15 +128,17 @@ const ServicesSection: React.FC = () => {
             SERVICES
           </GradientText>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 3).map((service, index) => (
-            <ServiceCard key={index} {...service} />
-          ))}
-        </div>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="lg:col-start-2 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.slice(0, 3).map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+          </div>
+          <div className="flex justify-center gap-8">
             {services.slice(3).map((service, index) => (
-              <ServiceCard key={index + 3} {...service} />
+              <div key={index + 3} className="w-full md:w-1/3">
+                <ServiceCard {...service} />
+              </div>
             ))}
           </div>
         </div>
