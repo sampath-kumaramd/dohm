@@ -27,7 +27,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
 }) => (
   <Card className="bg-white shadow-lg rounded-lg overflow-hidden">
     <CardContent className="p-6">
-      <Image
+      <Image unoptimized
         src="/google-logo.svg"
         alt="Google"
         width={40}
@@ -41,7 +41,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
       </div>
       <p className="text-gray-600 mb-4">{content}</p>
       <div className="flex items-center">
-        <Image
+        <Image unoptimized
           src={avatar}
           alt={author}
           width={40}

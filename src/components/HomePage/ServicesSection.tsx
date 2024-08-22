@@ -29,7 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   >
     <div className="flex flex-col items-center text-center h-full">
       <div className="mb-4 bg-white p-6 rounded-3xl shadow-md">
-        <Image
+        <Image unoptimized
           src={iconSrc}
           alt={title}
           width={64}

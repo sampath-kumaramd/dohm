@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className="bg-cream-dark">
       <nav className="flex justify-between items-center py-4 px-6 container mx-auto">
         <div className="flex items-center">
-          <Image
+          <Image unoptimized
             src="/logo.svg"
             alt="DCHM Logo"
             className="h-10 w-auto"
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-charcoal items-center">
             {isMenuOpen ? <X size={24} /> :
-              <Image
+              <Image unoptimized
             src="/icons/menu.svg"
             alt="menu Logo"
             className="h-10 w-auto"
@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="md:hidden fixed inset-0 bg-cream-dark z-50">
           <div className="flex flex-col items-center justify-center h-full space-y-8">
             <button onClick={toggleMenu} className="absolute top-4 right-6 text-charcoal">
-            <Image
+            <Image unoptimized
             src="/icons/close.svg"
             alt="menu Logo"
             className="h-10 w-auto"

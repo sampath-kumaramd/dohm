@@ -24,7 +24,7 @@ const WorkStep: React.FC<WorkStepProps> = ({
 }) => (
   <div className="flex flex-col items-center text-center relative">
     <div className="bg-white rounded-full p-4 mb-4 z-10">
-      <Image src={icon} alt={title} width={40} height={40} />
+      <Image unoptimized src={icon} alt={title} width={40} height={40} />
       {!isLast && (
         <div className="absolute top-6 ms-24 w-full h-6 bg-[url('/icons/dashed-line-with-circle.svg')] bg-no-repeat"></div>
       )}

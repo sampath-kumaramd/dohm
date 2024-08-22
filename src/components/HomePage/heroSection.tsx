@@ -55,21 +55,21 @@ const HeroSection = () => {
               </CustomButton>
               <div className="flex items-center">
                 <div className="flex -space-x-3 mr-2">
-                  <Image
+                  <Image unoptimized
                     src="/icons/people/avatar1.png"
                     alt="User"
                     width={40}
                     height={40}
                     className="rounded-full z-40"
                   />
-                  <Image
+                  <Image unoptimized
                     src="/icons/people/avatar2.png"
                     alt="User"
                     width={40}
                     height={40}
                     className="rounded-full z-20"
                   />
-                  <Image
+                  <Image unoptimized
                     src="/icons/people/avatar3.png"
                     alt="User"
                     width={40}
@@ -86,7 +86,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="mt-8 flex-1 justify-between sm:mt-0">
-            <Image
+            <Image unoptimized
               src="/homepage/hero-illustration.svg"
               alt="Hero Illustration"
               width={600}

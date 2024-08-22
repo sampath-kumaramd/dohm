@@ -42,7 +42,7 @@ const Footer = () => {
     <footer className="bg-charcoal text-cream py-10 px-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <Image
+          <Image unoptimized
             src="/logo-white.svg"
             alt="DCHM Logo"
             className="h-10 w-auto"
@@ -58,7 +58,7 @@ const Footer = () => {
               variant={'ghost'}
               className=" bg-orange-light rounded-full w-10 h-10 p-0 me-3 mt-10"
             >
-              <Image
+              <Image unoptimized
                 src={item.icon || '/icons/facebook.svg'}
                 alt={item.name}
                 className="h-5 w-auto"

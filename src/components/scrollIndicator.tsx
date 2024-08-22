@@ -22,7 +22,7 @@ const ScrollIndicator: React.FC<ScrollIndicatorProps> = ({ onClick }) => {
       aria-label="Scroll to next section"
     >
       <div className="w-12 h-24 bg-gradient-to-br border-1 border-white from-orange to-orange-lighter rounded-full flex items-center justify-center">
-              <Image
+              <Image unoptimized
               src="/icons/down-arrow.svg"
               alt="Hero Illustration"
               width={20}

@@ -17,7 +17,7 @@ const IdeaExecutionSection = () => {
       />
       <div className="container relative mx-auto flex flex-col md:flex-row items-center min-h-[75vh]">
         <div className="md:w-1/2 mb-10 md:mb-0 px-8">
-          <Image
+          <Image unoptimized
             src="/homepage/idea-execution.svg"
             alt="Idea Execution Illustration"
             className="w-[80vw] h-auto"
