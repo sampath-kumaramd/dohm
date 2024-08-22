@@ -1,18 +1,18 @@
-<svg width="375" height="826" viewBox="0 0 375 826" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="98" width="375" height="677" fill="#FAF0E6"/>
-<g filter="url(#filter0_f_2002_2055)">
-<circle cx="188" cy="272" r="72" fill="#E39B30"/>
+<svg width="375" height="839" viewBox="0 0 375 839" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="375" height="788" fill="#FAF0E6"/>
+<g filter="url(#filter0_f_2015_1395)">
+<circle cx="188" cy="285" r="72" fill="#E39B30"/>
 </g>
-<path d="M43.7611 806.117C77.6667 801.098 112.071 782.026 145.976 786.711C180.381 791.729 214.785 820.504 248.69 825.188C283.094 830.207 317 810.801 351.404 798.756C359.245 795.97 367.112 793.203 375 790.594V775H351.404H248.69H145.976H43.7611H0V796.81C13.5847 803.309 28.6246 808.177 43.7611 806.117Z" fill="#FAF0E6"/>
+<path d="M43.7611 819.117C77.6667 814.098 112.071 795.026 145.976 799.711C180.381 804.729 214.785 833.504 248.69 838.188C283.094 843.207 317 823.801 351.404 811.756C359.245 808.97 367.112 806.203 375 803.594V788H351.404H248.69H145.976H43.7611H0V809.81C13.5847 816.309 28.6246 821.177 43.7611 819.117Z" fill="#FAF0E6"/>
 <g opacity="0.2">
-<path d="M218.75 175.551L236.966 144L255.182 175.551H218.75Z" stroke="#D06D01" stroke-width="2"/>
-<path d="M205.555 173.274L237.374 155.529L236.832 191.957L205.555 173.274Z" stroke="#ECB349" stroke-width="2"/>
+<path d="M218.75 188.551L236.966 157L255.182 188.551H218.75Z" stroke="#D06D01" stroke-width="2"/>
+<path d="M205.555 186.274L237.374 168.529L236.832 204.957L205.555 186.274Z" stroke="#ECB349" stroke-width="2"/>
 </g>
 <defs>
-<filter id="filter0_f_2002_2055" x="-84" y="0" width="544" height="544" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_2015_1395" x="-84" y="13" width="544" height="544" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_2002_2055"/>
+<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_2015_1395"/>
 </filter>
 </defs>
 </svg>

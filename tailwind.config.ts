@@ -86,6 +86,9 @@ const config = {
         sans: ['var(--font-inter)'],
         heading: ['var(--font-eurostile)', 'sans-serif'],
       },
+      borderWidth: {
+        1: '1px',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
