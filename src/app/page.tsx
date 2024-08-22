@@ -1,9 +1,12 @@
+import HeroSection from '@/components/HomePage/heroSection';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
-    <div>
-      <Button>Click me</Button>
+    <div className="min-h-screen flex flex-col">
+      <main>
+        <HeroSection />
+      </main>
     </div>
   );
 }
