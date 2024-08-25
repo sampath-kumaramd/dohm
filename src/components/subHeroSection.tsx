@@ -91,11 +91,11 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
           backgroundImage: `url(${isMobile ? homePageHeroMobileBg.src : homePageHeroBg.src})`,
         }}
       />
-      <div className="container relative z-10 mx-auto px-4 py-16 sm:py-24 min-h-[82vh]">
+      <div className="container relative z-10 mx-auto px-4 py-8 sm:py-24 min-h-48 sm:min-h-[82vh]">
         <div className="flex items-center h-[50vh]">
           <div className="mx-auto items-center text-center px-4 -mt-10">
             {title && (
-              <h1 className="text-7xl  font-bold mb-6">
+              <h1 className="text-4xl sm:text-7xl  font-bold mb-6">
                 {title.reverseColors ? (
                   <>
                     {renderWord(title.secondWord)} {renderWord(title.firstWord)}
@@ -108,7 +108,9 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
               </h1>
             )}
             {subtitle && (
-              <p className="text-xl mb-6 text-gray-500 mx-72">{subtitle}</p>
+              <p className="text-xl mb-6 text-gray-500 mx-4 sm:mx-72">
+                {subtitle}
+              </p>
             )}
             {content && <div className="mb-8">{content}</div>}
             {buttons && buttons.length > 0 && (

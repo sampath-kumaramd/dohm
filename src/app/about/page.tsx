@@ -12,6 +12,8 @@ import GradientText from '@/components/ui/GradientText';
 import HowWeWorksBg from '../../../public/background/1.svg';
 import AboutUsMobileBg from '../../../public/background/about-us-background-mobile.svg';
 import AboutUsBg from '../../../public/background/about-us-background.svg';
+import ContactInfoSectionBackgroundMobile from '../../../public/background/contact-info-section-background-mobile.svg';
+import ContactInfoSectionBackground from '../../../public/background/contact-info-section-background.svg';
 import HowWeWorksBgMobile from '../../../public/background/how-we-works-background-mobile.svg';
 
 interface TeamMemberCardProps {
@@ -30,8 +32,8 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   description,
   imageSrc,
 }) => (
-  <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden mx-36">
-    <div className="md:w-1/3 p-6">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-white shadow-lg rounded-lg overflow-hidden mx-4 sm:mx-36">
+    <div className="p-6 sm:col-span-1">
       <Image
         src={imageSrc}
         alt={name}
@@ -40,7 +42,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         className="w-full h-full object-cover"
       />
     </div>
-    <div className="md:w-2/3 p-6 space-y-5">
+    <div className="p-6 sm:col-span-2 space-y-5">
       <h3 className="text-2xl font-bold mb-3">{name}</h3>
       <GradientText
         gradientColors={['#d57a0e', '#e49f34']}
@@ -107,7 +109,7 @@ const HowWeWorkSection: React.FC = () => {
         }}
         imageOnLeft={true}
       />
-      <section className="py-16 relative">
+      <section className="py-16 relative h-[280vh] sm:h-[300vh]">
         <div
           className="absolute inset-0 z-0 bg-cover bg-right w-screen bg-no-repeat"
           style={{
@@ -117,7 +119,7 @@ const HowWeWorkSection: React.FC = () => {
           }}
         />
         <div className="relative container mx-auto px-4 min-h-screen">
-          <h2 className="text-4xl sm:text-6xl font-bold text-white text-center py-6 sm:py-24">
+          <h2 className="text-4xl sm:text-6xl font-bold text-white text-center py-6 mt-12 sm:mt-24 sm:py-24">
             HOW WE WORK?
           </h2>
           <div className="flex justify-center items-center w-full">
@@ -147,7 +149,7 @@ const HowWeWorkSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="py-28 bg-gray-100">
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">
             OUR{' '}
@@ -173,6 +175,34 @@ const HowWeWorkSection: React.FC = () => {
             imageSrc="/aboutUsPage/team-member-1.svg"
           />
           {/* Add more TeamMemberCard components here for additional team members */}
+        </div>
+      </section>
+      <section className="relative min-h-[50vh]">
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: `url(${
+              isMobile
+                ? ContactInfoSectionBackgroundMobile.src
+                : ContactInfoSectionBackground.src
+            })`,
+          }}
+        />
+        <div className="container relative z-10 mx-auto w-full h-full ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pt-36 sm:pt-56">
+            <div>
+              <h2 className="text-white text-3xl md:text-5xl font-bold">
+                LET&apos;S DISCUSS YOUR
+                <br />
+                NEXT PROJECT
+              </h2>
+            </div>
+            <div className="flex md:justify-end mt-6 md:mt-0">
+              <button className="bg-charcoal text-white font-bold py-4 w-auto px-8 rounded-full hover:bg-gray-800 transition-colors duration-300 border-white border-2 cursor-pointer inline-block">
+                <Link href="/contact-us">Contact us</Link>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
