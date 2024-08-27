@@ -46,6 +46,7 @@ interface SubHeroSectionProps {
   content?: React.ReactNode;
   buttons?: ButtonProps[];
   tabs?: TabProps[];
+  onTabClick?: (tabText: string) => void;
 }
 
 const GradientText: React.FC<{
@@ -71,12 +72,19 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
   content,
   buttons,
   tabs,
+  onTabClick,
 }) => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const handleButtonClick = (action: string) => {
     console.log(`Button clicked: ${action}`);
     // Add more complex logic here if needed
+  };
+
+  const handleTabClick = (tabText: string) => {
+    if (onTabClick) {
+      onTabClick(tabText);
+    }
   };
 
   const renderWord = (word: TitleWordProps) => {
@@ -141,6 +149,7 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
                         ? 'bg-gradient-to-r from-orange to-orange-lighter text-white'
                         : 'bg-white text-black'
                     }`}
+                    onClick={() => handleTabClick(tab.text)}
                   >
                     {tab.text}
                   </button>
