@@ -73,6 +73,7 @@ const Service: React.FC = () => {
                   title={service.title}
                   description={service.description}
                   iconSrc={service.iconSrc}
+                  iconType='web'
                 />
               ))}
             </div>

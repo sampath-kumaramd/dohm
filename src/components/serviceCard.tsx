@@ -11,7 +11,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   iconType: string;
-  iconSrc?: string;
+  iconSrc: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
