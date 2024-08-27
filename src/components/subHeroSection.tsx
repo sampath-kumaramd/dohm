@@ -17,7 +17,7 @@ interface ButtonProps {
     | 'secondary'
     | 'ghost'
     | 'link';
-  onClick?: () => void;
+  action: string;
 }
 
 interface TabProps {
@@ -74,6 +74,11 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
 }) => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
+  const handleButtonClick = (action: string) => {
+    console.log(`Button clicked: ${action}`);
+    // Add more complex logic here if needed
+  };
+
   const renderWord = (word: TitleWordProps) => {
     if (word.gradientColors) {
       return (
@@ -95,7 +100,7 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
         <div className="flex items-center h-[50vh]">
           <div className="mx-auto items-center text-center px-4 -mt-10">
             {title && (
-              <h1 className="text-4xl sm:text-7xl  font-bold mb-6">
+              <h1 className="text-4xl sm:text-7xl font-bold mb-6">
                 {title.reverseColors ? (
                   <>
                     {renderWord(title.secondWord)} {renderWord(title.firstWord)}
@@ -114,12 +119,12 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
             )}
             {content && <div className="mb-8">{content}</div>}
             {buttons && buttons.length > 0 && (
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-wrap gap-4 mb-8 justify-center">
                 {buttons.map((button, index) => (
                   <Button
                     key={index}
                     variant={button.variant}
-                    onClick={button.onClick}
+                    onClick={() => handleButtonClick(button.action)}
                   >
                     {button.text}
                   </Button>
@@ -127,13 +132,13 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
               </div>
             )}
             {tabs && tabs.length > 0 && (
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 {tabs.map((tab, index) => (
                   <button
                     key={index}
                     className={`px-4 py-2 rounded-full ${
                       tab.active
-                        ? 'bg-orange-500 text-white'
+                        ? 'bg-gradient-to-r from-orange to-orange-lighter text-white'
                         : 'bg-white text-black'
                     }`}
                   >
