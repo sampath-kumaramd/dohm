@@ -1,4 +1,5 @@
 import ServiceCard from '@/components/serviceCard';
+import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
 
 import ServiceBG from '../../../public/background/service-background.svg';
@@ -9,30 +10,35 @@ const servicesData = [
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/web-development-icon.svg',
+    iconType: 'web',
   },
   {
     title: 'APP DEVELOPMENT',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/app-development-icon.svg',
+    iconType: 'App',
   },
   {
     title: 'INDIVIDUAL SOFTWARE DEVELOPMENT',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/software-development-icon.svg',
+    iconType: 'Software',
   },
   {
     title: 'DATABASE PLANNING & MANAGEMENT',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/database-icon.svg',
+    iconType: 'Database',
   },
   {
     title: 'API DEVELOPMENT & INTEGRATION',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/api-icon.svg',
+    iconType: 'API',
   },
 ];
 
@@ -73,12 +79,14 @@ const Service: React.FC = () => {
                   title={service.title}
                   description={service.description}
                   iconSrc={service.iconSrc}
+                  iconType={service.iconType}
                 />
               ))}
             </div>
           </div>
         </section>
       </section>
+      <SubContactSection />
     </div>
   );
 };

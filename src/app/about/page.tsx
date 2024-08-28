@@ -6,14 +6,13 @@ import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 
 import ContentSection from '@/components/contentSection';
+import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
 import GradientText from '@/components/ui/GradientText';
 
 import HowWeWorksBg from '../../../public/background/1.svg';
 import AboutUsMobileBg from '../../../public/background/about-us-background-mobile.svg';
 import AboutUsBg from '../../../public/background/about-us-background.svg';
-import ContactInfoSectionBackgroundMobile from '../../../public/background/contact-info-section-background-mobile.svg';
-import ContactInfoSectionBackground from '../../../public/background/contact-info-section-background.svg';
 import HowWeWorksBgMobile from '../../../public/background/how-we-works-background-mobile.svg';
 
 interface TeamMemberCardProps {
@@ -177,7 +176,9 @@ const HowWeWorkSection: React.FC = () => {
           {/* Add more TeamMemberCard components here for additional team members */}
         </div>
       </section>
-      <section className="relative min-h-[50vh]">
+      <SubContactSection />
+
+      {/* <section className="relative min-h-[50vh]">
         <div
           className="absolute inset-0 z-0 bg-cover bg-no-repeat"
           style={{
@@ -204,7 +205,7 @@ const HowWeWorkSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
