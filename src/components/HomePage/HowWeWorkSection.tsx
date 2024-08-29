@@ -1,6 +1,5 @@
-"use client";
+'use client';
 import React from 'react';
-
 
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
@@ -22,15 +21,15 @@ const WorkStep: React.FC<WorkStepProps> = ({
   description,
   isLast = false,
 }) => (
-  <div className="flex flex-col items-center text-center relative">
+  <div className="flex sm:flex-col flex-row items-center sm:text-center relative">
     <div className="bg-white rounded-full p-4 mb-4 z-10">
       <Image unoptimized src={icon} alt={title} width={40} height={40} />
       {!isLast && (
-        <div className="absolute top-6 ms-24 w-full h-6 bg-[url('/icons/dashed-line-with-circle.svg')] bg-no-repeat"></div>
+        <div className="absolute top-32 sm:top-6 sm:ms-24 w-full h-full sm:h-6 sm:bg-[url('/icons/dashed-line-with-circle.svg')] bg-[url('/icons/dashed-line-with-circle-mobile.svg')] bg-no-repeat"></div>
       )}
     </div>
-    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 w-full min-h-60 -mt-10 pt-20">
-      <h3 className="text-white text-2xl font-bold mb-2">{title}</h3>
+    <div className="-ms-8 ps-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 w-full sm:min-h-60 sm:-mt-10 sm:pt-20">
+      <h3 className="text-white sm:text-2xl text-lg font-bold mb-2">{title}</h3>
       <p className="text-cream text-base">{description}</p>
     </div>
   </div>
@@ -66,10 +65,9 @@ const HowWeWorkSection: React.FC = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
-
-    <section className="py-16  relative">
-       <div
-        className="absolute inset-0 z-0 bg-cover bg-right w-screen bg-no-repeat"
+    <section className="py-16 relative">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-right w-full bg-no-repeat"
         style={{
           backgroundImage: `url(${
             isMobile ? homePageHowWeWorkMobileBg.src : homePageHowWeWorkBg.src
@@ -77,10 +75,10 @@ const HowWeWorkSection: React.FC = () => {
         }}
       />
       <div className="relative container mx-auto px-4 min-h-[70vh]">
-        <h2 className="text-5xl font-bold text-white text-center mb-16 mt-40">
+        <h2 className="sm:text-5xl text-3xl font-bold text-white text-center mb-16 sm:mt-40 mt-12">
           HOW WE WORK?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:mx-0 mx-4 gap-8 mb-16">
           {steps.map((step, index) => (
             <WorkStep
               key={index}
@@ -92,7 +90,7 @@ const HowWeWorkSection: React.FC = () => {
           ))}
         </div>
         <div className="text-center">
-           <Link
+          <Link
             to="developer-booking-form"
             smooth={true}
             duration={500}

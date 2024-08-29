@@ -27,7 +27,8 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
 }) => (
   <Card className="bg-white shadow-lg rounded-lg overflow-hidden">
     <CardContent className="p-6">
-      <Image unoptimized
+      <Image
+        unoptimized
         src="/google-logo.svg"
         alt="Google"
         width={40}
@@ -41,7 +42,8 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
       </div>
       <p className="text-gray-600 mb-4">{content}</p>
       <div className="flex items-center">
-        <Image unoptimized
+        <Image
+          unoptimized
           src={avatar}
           alt={author}
           width={40}
@@ -129,14 +131,14 @@ const ClientTestimonialsCarousel: React.FC = () => {
   }, [api]);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="sm:py-16 py-12 mt-8 sm:0 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="sm:text-5xl text-3xl font-bold text-center mb-12">
           WHAT OUR <span className="text-orange-400">CLIENTS</span> SAY
         </h2>
         <Carousel
           setApi={setApi}
-          className="w-full  mx-auto"
+          className="w-full px-4 sm:px-0 mx-auto"
           opts={{
             align: 'start',
             loop: true,
@@ -155,7 +157,9 @@ const ClientTestimonialsCarousel: React.FC = () => {
             <button
               key={i}
               className={` rounded-full mx-1 ${
-                i === current ? 'bg-gradient-to-br from-orange-light to-orange-lighter w-4 h-4 ' : 'w-3 h-3 bg-gradient-to-br from-[#f7e5cf] to-[#fcf1dc]'
+                i === current
+                  ? 'bg-gradient-to-br from-orange-light to-orange-lighter w-4 h-4 '
+                  : 'w-3 h-3 bg-gradient-to-br from-[#f7e5cf] to-[#fcf1dc]'
               }`}
               onClick={() => api?.scrollTo(i)}
             />

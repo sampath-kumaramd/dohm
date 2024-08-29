@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 
 import Image from 'next/image';
@@ -29,7 +29,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   >
     <div className="flex flex-col items-center text-center h-full">
       <div className="mb-4 bg-white p-6 rounded-3xl shadow-md">
-        <Image unoptimized
+        <Image
+          unoptimized
           src={iconSrc}
           alt={title}
           width={64}
@@ -109,17 +110,19 @@ const ServicesSection: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="sm:py-16 py-6 pb-12 sm:pb-0 relative overflow-hidden">
       <div
         className="absolute inset-0 z-0 bg-cover bg-right w-screen bg-no-repeat"
         style={{
           backgroundImage: `url(${
-            isMobile ? '../../../public/background/home-page-our-service-mobile.svg' : '../../../public/background/home-page-our-service.svg'
+            isMobile
+              ? '../../../public/background/home-page-our-service-mobile.svg'
+              : '../../../public/background/home-page-our-service.svg'
           })`,
         }}
       />
       <div className="container relative mx-auto px-4">
-        <h2 className="text-5xl font-bold mb-12 text-center">
+        <h2 className="sm:text-5xl text-3xl font-bold mb-12 text-center">
           OUR
           <GradientText
             gradientColors={['#d57a0e', '#e49f34']}
@@ -128,13 +131,13 @@ const ServicesSection: React.FC = () => {
             SERVICES
           </GradientText>
         </h2>
-        <div className="space-y-8">
+        <div className="space-y-8 mx-4 sm:mx-0">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.slice(0, 3).map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
           </div>
-          <div className="flex justify-center gap-8">
+          <div className="sm:flex space-y-8 sm:space-y-0 justify-center gap-8">
             {services.slice(3).map((service, index) => (
               <div key={index + 3} className="w-full md:w-1/3">
                 <ServiceCard {...service} />

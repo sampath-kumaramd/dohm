@@ -66,17 +66,17 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
   const [selectedOption, setSelectedOption] = useState('developer');
 
   return (
-    <section id="developer-booking-form" className="py-16 relative">
+    <section id="developer-booking-form" className="sm:py-16 relative">
       <Image
         unoptimized
         src={homePageFormBg.src}
         alt="Form Background"
         width={400}
         height={400}
-        className=" absolute left-96 -top-10"
+        className=" absolute  sm:left-96 sm:-top-10"
       />
-      <div className=" relative grid grid-cols-8 justify-between p-8  gap-36 min-h-[50vh] container">
-        <div className="col-span-4 items-center flex">
+      <div className=" relative grid sm:grid-cols-8 grid-cols-1 justify-between p-8 sm:gap-36 gap-16 min-h-[50vh] container">
+        <div className="sm:col-span-4 items-center flex">
           <div className="w-full">
             {showSelectionButtons && (
               <div className="inline-flex mb-4 bg-white p-3 rounded-full shadow-md shadow-gray-200">
@@ -102,7 +102,7 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
                 </button>
               </div>
             )}
-            <h1 className="text-5xl font-bold mb-4">
+            <h1 className="sm:text-5xl text-3xl font-bold mb-4">
               BOOK A{' '}
               <span className="text-orange-500">
                 <GradientText gradientColors={['#d57a0e', '#eaaf44']}>
@@ -110,7 +110,7 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
                 </GradientText>
               </span>
             </h1>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 sm:text-xl text-lg mb-8">
               Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi
               molestie cursus sagittis.
             </p>
@@ -160,7 +160,7 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
             </div>
           </div>
         </div>
-        <Card className=" col-span-4 bg-gradient-to-br from-orange-light to-orange-lighter text-white  mx-auto  rounded-3xl">
+        <Card className=" sm:col-span-4 bg-gradient-to-br from-orange-light to-orange-lighter text-white  mx-auto  rounded-3xl">
           <CardContent className=" py-10">
             <Form {...form}>
               <form
