@@ -4,7 +4,16 @@ import React, { useState } from 'react';
 import ProjectsGrid from '@/components/projectGrid';
 import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
+import GradientText from '@/components/ui/GradientText';
 import { projectsData, Project } from '@/lib/project-data';
+
+const slides = [
+  { id: 1, content: 'Slide 1' },
+  { id: 2, content: 'Slide 2' },
+  { id: 3, content: 'Slide 3' },
+  { id: 4, content: 'Slide 4' },
+  { id: 5, content: 'Slide 5' },
+];
 
 const Projects: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Web Development');
@@ -53,6 +62,17 @@ const Projects: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <ProjectsGrid projects={projectsData[activeTab] || []} />
       </div>
+      <section className="container mx-auto py-16">
+        <p className="w-full text-center text-4xl font-bold">
+          WHAT OUR
+          <span>
+            <GradientText gradientColors={['#d57a0e', '#e49f34']}>
+              &nbsp; CLIENTS &nbsp;
+            </GradientText>
+          </span>
+          SAY
+        </p>
+      </section>
       <SubContactSection />
     </div>
   );

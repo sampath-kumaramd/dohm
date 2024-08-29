@@ -10,30 +10,35 @@ const servicesData = [
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/web-development-icon.svg',
+    iconType: 'web',
   },
   {
     title: 'APP DEVELOPMENT',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/app-development-icon.svg',
+    iconType: 'App',
   },
   {
     title: 'INDIVIDUAL SOFTWARE DEVELOPMENT',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/software-development-icon.svg',
+    iconType: 'Software',
   },
   {
     title: 'DATABASE PLANNING & MANAGEMENT',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/database-icon.svg',
+    iconType: 'Database',
   },
   {
     title: 'API DEVELOPMENT & INTEGRATION',
     description:
       'Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi molestie cursus sagittis.',
     iconSrc: '/icons/api-icon.svg',
+    iconType: 'API',
   },
 ];
 
@@ -64,17 +69,17 @@ const Service: React.FC = () => {
             backgroundImage: ServiceBG.src,
           }}
         />
-
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 flex items-center justify-center sm:py-24 py-12">
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-24">
               {servicesData.map((service, index) => (
                 <ServiceCard
                   key={index}
                   title={service.title}
                   description={service.description}
                   iconSrc={service.iconSrc}
-                  iconType="web"
+                  iconType={service.iconType}
+                  isIconLeft={index % 2 === 0}
                 />
               ))}
             </div>
@@ -85,4 +90,5 @@ const Service: React.FC = () => {
     </div>
   );
 };
+
 export default Service;

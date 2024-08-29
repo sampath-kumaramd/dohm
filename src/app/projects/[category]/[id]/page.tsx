@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+import GradientText from '@/components/ui/GradientText';
 import { projectsData } from '@/lib/project-data';
 
 interface ProjectDetailPageProps {
@@ -25,22 +26,13 @@ export async function generateStaticParams() {
 const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ params }) => {
   const { category, id } = params;
 
-  console.log('Params:', params); // Debugging log
-
-  // Normalize the category from the URL
   const normalizedUrlCategory = category.replace(/-/g, ' ').toLowerCase();
 
-  console.log('Normalized URL category:', normalizedUrlCategory); // Debugging log
-
-  // Find the matching category in projectsData
   const projectCategory = Object.keys(projectsData).find((key) =>
     key.toLowerCase().startsWith(normalizedUrlCategory)
   );
 
-  console.log('Matched project category:', projectCategory); // Debugging log
-
   if (!projectCategory) {
-    console.log('Category not found'); // Debugging log
     notFound();
   }
 
@@ -48,60 +40,38 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ params }) => {
     (p) => p.id.toString() === id
   );
 
-  console.log('Found project:', project); // Debugging log
-
   if (!project) {
-    console.log('Project not found'); // Debugging log
     notFound();
   }
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-3xl p-6 shadow-lg overflow-hidden">
+      <div className="bg-white mx-8 sm:mx-20 md:mx-36 overflow-hidden py-10 sm:py-24 space-y-5 sm:space-y-10">
+        <h1 className="sm:text-7xl text-4xl sm:pb-8 pb-4 w-full text-center font-bold mb-4">
+          {project.title}
+        </h1>
         <Image
-          src={project.image}
+          src={project.image1}
           alt={project.title}
-          width={800}
-          height={400}
+          width={600}
+          height={200}
           className="w-full rounded-xl mb-6"
         />
-        <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-        <p className="text-xl mb-6">{project.testimonials}</p>
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">Project Details</h2>
-            <p>
-              <strong>Category:</strong> {project.category}
-            </p>
-            <p>
-              <strong>Live App:</strong>{' '}
-              <a
-                href={project.liveAppLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                {project.liveAppLink}
-              </a>
-            </p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">Technologies Used</h2>
-            <div className="flex space-x-2">
-              {project.logos.map((logo, index) => (
-                <Image
-                  key={index}
-                  src={logo}
-                  alt={`Technology ${index + 1}`}
-                  width={40}
-                  height={40}
-                />
-              ))}
-            </div>
-          </div>
+        <div className="text-base text-gray-500 space-y-3">
+          <p>{project.description1?.firstPart}</p>
+          <p>{project.description1?.secondPart}</p>
         </div>
-        <div className="border-t pt-6">
-          <h2 className="text-2xl font-semibold mb-4">About the Author</h2>
+        <div className="bg-[#FAF0E6] p-5 rounded-xl space-y-5">
+          <div className="relative w-10 h-10">
+            <Image
+              src="/icons/quatation-mark.svg"
+              alt="Arrow"
+              width={42}
+              height={42}
+              className="group-hover:animate-pulse"
+            />
+          </div>
+          <p className=" italic text-lg text-black">{project.testimonials}</p>
           <div className="flex items-center">
             <Image
               src={project.author.avatar}
@@ -111,10 +81,69 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ params }) => {
               className="rounded-full mr-4"
             />
             <div>
-              <p className="font-semibold">{project.author.name}</p>
+              <p className="font-bold">{project.author.name}</p>
               <p>{project.author.role}</p>
             </div>
           </div>
+        </div>
+        {project.image2 ? (
+          <Image
+            src={project.image2}
+            alt={project.title || 'Project image'}
+            width={600}
+            height={0}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+            className="rounded-xl mb-6"
+          />
+        ) : (
+          <div className="w-full h-[200px] bg-gray-200 rounded-xl mb-6 flex items-center justify-center">
+            <p>No image available</p>
+          </div>
+        )}
+        <div className="text-base text-gray-500 space-y-3">
+          <p>{project.description2?.firstPart}</p>
+          <p>{project.description2?.secondPart}</p>
+        </div>
+        <div className="flex">
+          <div className="flex justify-end space-x-2 mb-4">
+            {project.logos.map((logo, index) => (
+              <div
+                key={index}
+                className="w-16 h-16 bg-white border border-gray-400 rounded-full flex items-center justify-center"
+              >
+                <Image
+                  src={logo}
+                  alt={`Technology ${index + 1}`}
+                  width={20}
+                  height={20}
+                />
+              </div>
+            ))}
+          </div>
+          <a
+            href={project.liveAppLink}
+            className="text-orange-500 font-semibold flex items-center mb-4 ms-5"
+          >
+            <GradientText
+              gradientColors={['#d57a0e', '#e49f34']}
+              className="group-hover:hidden text-lg font-bold"
+            >
+              VISIT LIVE APP
+            </GradientText>
+            <div className="relative w-5 h-5 ml-1">
+              <Image
+                src="/icons/up-arrow.svg"
+                alt="Arrow"
+                width={20}
+                height={20}
+                className="group-hover:animate-pulse"
+              />
+            </div>
+          </a>
         </div>
       </div>
     </div>

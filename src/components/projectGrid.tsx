@@ -12,7 +12,7 @@ interface Project {
   category: string;
   title: string;
   testimonials: string;
-  image: string;
+  image1: string;
   author: {
     name: string;
     role: string;
@@ -36,7 +36,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
         >
           <div className="bg-gray-200 rounded-2xl mb-6">
             <Image
-              src={project.image}
+              src={project.image1}
               alt={project.title}
               width={400}
               height={200}
@@ -87,7 +87,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
               </div>
             </div>
           </div>
-          <p className="text-gray-700 mb-6">{project.testimonials}</p>
+          <p className="text-gray-700 italic mb-6">{project.testimonials}</p>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
               <Image
