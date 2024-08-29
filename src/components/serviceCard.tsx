@@ -12,6 +12,7 @@ interface ServiceCardProps {
   description: string;
   iconType: string;
   iconSrc: string;
+  isIconLeft: boolean;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -19,13 +20,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   iconType,
   iconSrc,
+  isIconLeft,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const Icon = iconType === 'web' ? CodeIcon : SmartphoneIcon;
-
   return (
-    <div className="flex p-8 pt-24 sm:pt-8 bg-white rounded-xl shadow-lg max-w-5xl hover:bg-gradient-to-br hover:from-orange hover:to-orange-lighter hover:text-white ">
+    <div className="flex p-10 pt-24 sm:pt-8 bg-white rounded-xl shadow-lg max-w-5xl hover:bg-gradient-to-br hover:from-orange hover:to-orange-lighter hover:text-white ">
       <div
         className="w-full max-w-5xl transition-all duration-300 ease-in-out"
         onMouseEnter={() => setIsHovered(true)}
@@ -35,7 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <div
             className={`
           p-6 rounded-lg shadow-lg bg-white z-10 
-          absolute sm:left-0  sm:top-1/2 -translate-y-1/2
+          absolute ${isIconLeft ? 'sm:left-0' : 'sm:right-0'} sm:top-1/2 -translate-y-1/2
           ${isHovered ? 'bg-orange-100' : 'bg-white'}
           transition-all duration-300
         `}
@@ -44,13 +44,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               unoptimized
               src={iconSrc}
               alt={title}
-              width={64}
-              height={64}
+              width={84}
+              height={84}
             />
           </div>
           <div
             className={`
-          mt-4 sm:mt-0 sm:ms-20 sm:px-36 p-8 rounded-lg shadow-lg transition-all duration-300 w-full
+          mt-4 sm:mt-0 ${isIconLeft ? 'sm:ms-20' : 'sm:me-20'} sm:px-36 p-8 rounded-lg shadow-lg transition-all duration-300 w-full
           ${isHovered ? 'bg-none shadow-none' : 'bg-gray-200'}
         `}
           >

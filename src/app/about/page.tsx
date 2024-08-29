@@ -6,14 +6,13 @@ import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 
 import ContentSection from '@/components/contentSection';
+import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
 import GradientText from '@/components/ui/GradientText';
 
 import HowWeWorksBg from '../../../public/background/1.svg';
 import AboutUsMobileBg from '../../../public/background/about-us-background-mobile.svg';
 import AboutUsBg from '../../../public/background/about-us-background.svg';
-import ContactInfoSectionBackgroundMobile from '../../../public/background/contact-info-section-background-mobile.svg';
-import ContactInfoSectionBackground from '../../../public/background/contact-info-section-background.svg';
 import HowWeWorksBgMobile from '../../../public/background/how-we-works-background-mobile.svg';
 
 interface TeamMemberCardProps {
@@ -111,7 +110,7 @@ const HowWeWorkSection: React.FC = () => {
       />
       <section className="py-16 relative h-[280vh] sm:h-[300vh]">
         <div
-          className="absolute inset-0 z-0 bg-cover bg-right w-screen bg-no-repeat"
+          className="absolute inset-0 z-0 bg-cover bg-right w-auto bg-no-repeat"
           style={{
             backgroundImage: `url(${
               isMobile ? HowWeWorksBgMobile.src : HowWeWorksBg.src
@@ -177,34 +176,7 @@ const HowWeWorkSection: React.FC = () => {
           {/* Add more TeamMemberCard components here for additional team members */}
         </div>
       </section>
-      <section className="relative min-h-[50vh]">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: `url(${
-              isMobile
-                ? ContactInfoSectionBackgroundMobile.src
-                : ContactInfoSectionBackground.src
-            })`,
-          }}
-        />
-        <div className="container relative z-10 mx-auto w-full h-full ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pt-36 sm:pt-56">
-            <div>
-              <h2 className="text-white text-3xl md:text-5xl font-bold">
-                LET&apos;S DISCUSS YOUR
-                <br />
-                NEXT PROJECT
-              </h2>
-            </div>
-            <div className="flex md:justify-end mt-6 md:mt-0">
-              <button className="bg-charcoal text-white font-bold py-4 w-auto px-8 rounded-full hover:bg-gray-800 transition-colors duration-300 border-white border-2 cursor-pointer inline-block">
-                <Link href="/contact-us">Contact us</Link>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SubContactSection />
     </div>
   );
 };

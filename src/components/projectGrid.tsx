@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import GradientText from '@/components/ui/GradientText';
 
@@ -8,9 +9,10 @@ import CustomButton from './customButton';
 
 interface Project {
   id: number;
+  category: string;
   title: string;
-  description: string;
-  image: string;
+  testimonials: string;
+  image1: string;
   author: {
     name: string;
     role: string;
@@ -34,7 +36,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
         >
           <div className="bg-gray-200 rounded-2xl mb-6">
             <Image
-              src={project.image}
+              src={project.image1}
               alt={project.title}
               width={400}
               height={200}
@@ -42,7 +44,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
             />
           </div>
           <div className="grid grid-cols-3 mb-5">
-            <div className=" col-span-2">
+            <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-2 uppercase">
                 {project.title}
               </h3>
@@ -56,19 +58,18 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
                 >
                   VISIT LIVE APP
                 </GradientText>
-
                 <div className="relative w-4 h-4 ml-1">
                   <Image
-                    src="/icons/up-arrow.svg" // Replace with your actual image path
+                    src="/icons/up-arrow.svg"
                     alt="Arrow"
-                    layout="fill"
-                    objectFit="contain"
+                    width={16}
+                    height={16}
                     className="group-hover:animate-pulse"
                   />
                 </div>
               </a>
             </div>
-            <div className="col-span-1 ">
+            <div className="col-span-1">
               <div className="flex justify-end space-x-2 mb-4">
                 {project.logos.map((logo, index) => (
                   <div
@@ -86,8 +87,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
               </div>
             </div>
           </div>
-
-          <p className="text-gray-700 mb-6">{project.description}</p>
+          <p className="text-gray-700 italic mb-6">{project.testimonials}</p>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
               <Image
@@ -102,9 +102,11 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
                 <p className="text-sm text-gray-600">{project.author.role}</p>
               </div>
             </div>
-            <CustomButton className="bg-orange-500 hover:bg-orange-600 text-white">
-              Learn more
-            </CustomButton>
+            <Link href={`/projects/${project.category}/${project.id}`} passHref>
+              <CustomButton className="bg-orange-500 hover:bg-orange-600 text-white">
+                Learn more
+              </CustomButton>
+            </Link>
           </div>
         </div>
       ))}

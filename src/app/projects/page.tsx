@@ -2,21 +2,18 @@
 import React, { useState } from 'react';
 
 import ProjectsGrid from '@/components/projectGrid';
+import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
+import GradientText from '@/components/ui/GradientText';
+import { projectsData, Project } from '@/lib/project-data';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  author: {
-    name: string;
-    role: string;
-    avatar: string;
-  };
-  logos: string[];
-  liveAppLink: string;
-}
+const slides = [
+  { id: 1, content: 'Slide 1' },
+  { id: 2, content: 'Slide 2' },
+  { id: 3, content: 'Slide 3' },
+  { id: 4, content: 'Slide 4' },
+  { id: 5, content: 'Slide 5' },
+];
 
 const Projects: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Web Development');
@@ -38,143 +35,12 @@ const Projects: React.FC = () => {
     },
   ];
 
-  // Mock data for projects (replace with actual data fetching logic)
-  const projectsData: { [key: string]: Project[] } = {
-    'Web Development': [
-      {
-        id: 1,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      {
-        id: 2,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      // Add more web development projects
-    ],
-    'App Development': [
-      {
-        id: 1,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      // Add more app development projects
-    ],
-    'Individual software development': [
-      {
-        id: 1,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      {
-        id: 2,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      {
-        id: 3,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      // Add more app development projects
-    ],
-    'Database Planning & Management': [
-      {
-        id: 1,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      // Add more app development projects
-    ],
-    'API development & integration': [
-      {
-        id: 1,
-        title: 'Mobile App for Fitness',
-        description:
-          'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-        image: '/projects/webDevelopment/WA-image1.jpg',
-        author: {
-          name: 'Stephen Smith',
-          role: 'CEO',
-          avatar: '/projects/webDevelopment/people1.png',
-        },
-        logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
-        liveAppLink: 'https://healthio-app.com',
-      },
-      // Add more app development projects
-    ],
-  };
-
   const handleTabClick = (tabText: string) => {
     setActiveTab(tabText);
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white">
       <SubHeroSection
         title={{
           firstWord: {
@@ -193,9 +59,21 @@ const Projects: React.FC = () => {
         tabs={tabs}
         onTabClick={handleTabClick}
       />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-16">
         <ProjectsGrid projects={projectsData[activeTab] || []} />
       </div>
+      <section className="container mx-auto py-16">
+        <p className="w-full text-center text-4xl font-bold">
+          WHAT OUR
+          <span>
+            <GradientText gradientColors={['#d57a0e', '#e49f34']}>
+              &nbsp; CLIENTS &nbsp;
+            </GradientText>
+          </span>
+          SAY
+        </p>
+      </section>
+      <SubContactSection />
     </div>
   );
 };
