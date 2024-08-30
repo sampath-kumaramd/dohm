@@ -110,7 +110,7 @@ const ServicesSection: React.FC = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
-    <section className="sm:py-16 py-6 pb-12 sm:pb-0 relative overflow-hidden">
+    <section className="sm:py-16 py-6 pb-12 sm:pb-24 relative overflow-hidden">
       <div
         className="absolute inset-0 z-0 bg-cover bg-right w-screen bg-no-repeat"
         style={{

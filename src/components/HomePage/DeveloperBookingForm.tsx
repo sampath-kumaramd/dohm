@@ -65,6 +65,132 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
   };
   const [selectedOption, setSelectedOption] = useState('developer');
 
+  const renderContent = () => {
+    if (selectedOption === 'developer') {
+      return (
+        <>
+          <h1 className="sm:text-5xl text-3xl font-bold mb-4">
+            BOOK A{' '}
+            <span className="text-orange-500">
+              <GradientText gradientColors={['#d57a0e', '#eaaf44']}>
+                DEVELOPER
+              </GradientText>
+            </span>
+          </h1>
+          <p className="text-gray-600 sm:text-xl text-lg mb-8">
+            Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi
+            molestie cursus sagittis.
+          </p>
+          <div className="bg-white rounded-lg p-4 mb-4 shadow-[0_16px_65px_rgba(0,0,0,0.08)]">
+            <div className="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-black mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <div className="ms-4">
+                <div className="font-bold">EMAIL</div>
+                <div className="font-light">dhomagency@mail.com</div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-[0_16px_65px_rgba(0,0,0,0.08)]">
+            <div className="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-black mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <div className="ms-4">
+                <div className="font-bold">CONTACT</div>
+                <div className="font-light">999-888-666</div>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    } else if (selectedOption === 'query') {
+      return (
+        <>
+          <h1 className="sm:text-5xl text-3xl font-bold mb-4">
+            CONTACT{' '}
+            <span className="text-orange-500">
+              <GradientText gradientColors={['#d57a0e', '#eaaf44']}>
+                US
+              </GradientText>
+            </span>
+          </h1>
+          <p className="text-gray-600 sm:text-xl text-lg mb-8">
+            Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi
+            molestie cursus sagittis.
+          </p>
+          <div className="bg-white rounded-lg p-4 mb-4 shadow-[0_16px_65px_rgba(0,0,0,0.08)]">
+            <div className="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-black mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <div className="ms-4">
+                <div className="font-bold">EMAIL</div>
+                <div className="font-light">contactus@mail.com</div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-[0_16px_65px_rgba(0,0,0,0.08)]">
+            <div className="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-black mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <div className="ms-4">
+                <div className="font-bold">CONTACT</div>
+                <div className="font-light">999-888-777</div>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    }
+  };
+
   return (
     <section id="developer-booking-form" className="sm:py-16 relative">
       <Image
@@ -73,9 +199,9 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
         alt="Form Background"
         width={400}
         height={400}
-        className=" absolute  sm:left-96 sm:-top-10"
+        className="absolute sm:left-96 sm:-top-10"
       />
-      <div className=" relative grid sm:grid-cols-8 grid-cols-1 justify-between p-8 sm:gap-36 gap-16 min-h-[50vh] container">
+      <div className="relative grid sm:grid-cols-8 grid-cols-1 justify-between p-8 sm:gap-36 gap-16 min-h-[50vh] container">
         <div className="sm:col-span-4 items-center flex">
           <div className="w-full">
             {showSelectionButtons && (
@@ -102,62 +228,7 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
                 </button>
               </div>
             )}
-            <h1 className="sm:text-5xl text-3xl font-bold mb-4">
-              BOOK A{' '}
-              <span className="text-orange-500">
-                <GradientText gradientColors={['#d57a0e', '#eaaf44']}>
-                  DEVELOPER
-                </GradientText>
-              </span>
-            </h1>
-            <p className="text-gray-600 sm:text-xl text-lg mb-8">
-              Lorem ipsum dolor sit amet consectetur. Orci egestas enim nisi
-              molestie cursus sagittis.
-            </p>
-            <div className="bg-white rounded-lg p-4 mb-4 shadow-[0_16px_65px_rgba(0,0,0,0.08)]">
-              <div className="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-black mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <div className=" ms-4">
-                  <div className=" font-bold">EMAIL</div>
-                  <div className=" font-light">dhomagency@mail.com</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg p-4 shadow-[0_16px_65px_rgba(0,0,0,0.08)]">
-              <div className="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-black mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                <div className=" ms-4">
-                  <div className=" font-bold">CONTACT</div>
-                  <div className=" font-light">999-888-777</div>
-                </div>
-              </div>
-            </div>
+            {renderContent()}
           </div>
         </div>
         <Card className=" sm:col-span-4 bg-gradient-to-br from-orange-light to-orange-lighter text-white  mx-auto  rounded-3xl">

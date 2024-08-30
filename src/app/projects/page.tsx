@@ -5,7 +5,6 @@ import CustomCarousel from '@/components/CustomCarousel';
 import ProjectsGrid from '@/components/projectGrid';
 import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
-import GradientText from '@/components/ui/GradientText';
 import { projectsData, Project } from '@/lib/project-data';
 
 const carouselItems = [
@@ -23,8 +22,14 @@ const Projects: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Web Development');
 
   const tabs = [
-    { text: 'Web Development', active: activeTab === 'Web Development' },
-    { text: 'App Development', active: activeTab === 'App Development' },
+    {
+      text: 'Web Development',
+      active: activeTab === 'Web Development',
+    },
+    {
+      text: 'App Development',
+      active: activeTab === 'App Development',
+    },
     {
       text: 'Individual software development',
       active: activeTab === 'Individual software development',
