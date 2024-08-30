@@ -34,8 +34,8 @@ export const projectsData: { [key: string]: Project[] } = {
       title: 'MOBILE APP FOR FITNESS',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image2.png',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
       description1: {
         firstPart:
           'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
@@ -64,8 +64,38 @@ export const projectsData: { [key: string]: Project[] } = {
       title: 'Mobile App for Games',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image1.jpg',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
+      description1: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
+      description2: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
+      author: {
+        name: 'Stephen Smith',
+        role: 'CEO',
+        avatar: '/projects/webDevelopment/people1.png',
+      },
+      logos: ['/icons/mongoDB.svg', '/icons/flutter.svg'],
+      liveAppLink: 'https://healthio-app.com',
+    },
+    {
+      id: 3,
+      category: 'Web',
+      title: 'Mobile App for Games',
+      testimonials:
+        'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
       description1: {
         firstPart:
           'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
@@ -96,8 +126,8 @@ export const projectsData: { [key: string]: Project[] } = {
       title: 'Web App for Finance',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image1.jpg',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
       description1: {
         firstPart:
           'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
@@ -123,11 +153,25 @@ export const projectsData: { [key: string]: Project[] } = {
     {
       id: 2,
       category: 'App',
-      title: 'Web App for Trading',
+      title: 'Mobile App for Games',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image1.jpg',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
+      description1: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
+      description2: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
       author: {
         name: 'Stephen Smith',
         role: 'CEO',
@@ -141,11 +185,25 @@ export const projectsData: { [key: string]: Project[] } = {
     {
       id: 1,
       category: 'Software',
-      title: 'Mobile App for Fitness',
+      title: 'Mobile App for Games',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image1.jpg',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
+      description1: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
+      description2: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
       author: {
         name: 'Stephen Smith',
         role: 'CEO',
@@ -159,11 +217,25 @@ export const projectsData: { [key: string]: Project[] } = {
     {
       id: 1,
       category: 'Database',
-      title: 'Mobile App for Fitness',
+      title: 'Mobile App for Games',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image1.jpg',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
+      description1: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
+      description2: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
       author: {
         name: 'Stephen Smith',
         role: 'CEO',
@@ -177,11 +249,25 @@ export const projectsData: { [key: string]: Project[] } = {
     {
       id: 1,
       category: 'api-integration',
-      title: 'Mobile App for Fitness',
+      title: 'Mobile App for Games',
       testimonials:
         'Above and beyond service, responsive and professional, and capable of meeting my expectations. Extremely flexible and both in terms of Frontend and Backend. Highly recommended.',
-      image1: '/projects/webDevelopment/WA-image1.jpg',
-      image2: '/projects/webDevelopment/WA-image1.jpg',
+      image1: '/projects/webDevelopment/WA-image1.svg',
+      image2: '/projects/webDevelopment/WA-image2.svg',
+      description1: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
+      description2: {
+        firstPart:
+          'Lorem ipsum dolor sit amet consectetur. Gravida at consequat malesuada in et vel quam turpis facilisis. Gravida gravida massa euismod id vehicula. Sagittis tempor ut pellentesque et. Leo elementum quis leo aliquet. Commodo sed in ac feugiat aliquam. Fusce donec ultrices tincidunt praesent.',
+        secondPart:
+          'Blandit nulla nunc sapien non sit ultrices ut. Dignissim aliquet lectus acdum sed ultrices semper sed sed turpis. Venenatis vel sed convallis quis volutpat.',
+        thirdPart: '',
+      },
       author: {
         name: 'Stephen Smith',
         role: 'CEO',

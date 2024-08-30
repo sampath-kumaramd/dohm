@@ -31,6 +31,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ params }) => {
   const projectCategory = Object.keys(projectsData).find((key) =>
     key.toLowerCase().startsWith(normalizedUrlCategory)
   );
+  console.log('projectCategory', projectCategory);
 
   if (!projectCategory) {
     notFound();
