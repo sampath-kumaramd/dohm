@@ -3,8 +3,11 @@ import React from 'react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+import SubContactSection from '@/components/subContactSection';
 import GradientText from '@/components/ui/GradientText';
 import { projectsData } from '@/lib/project-data';
+
+import projectDetails from '../../../../../public/background/project-details.svg';
 
 interface ProjectDetailPageProps {
   params: {
@@ -46,8 +49,18 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ params }) => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white mx-8 sm:mx-20 md:mx-36 overflow-hidden py-10 sm:py-24 space-y-5 sm:space-y-10">
+   <div className="relative w-full">
+      <div className="relative sm:h-[80vh] h-[30vh] w-full">
+        <Image
+          src={projectDetails}
+          alt="Card background"
+          layout="fill"
+          objectFit="cover"
+          className="z-0"
+        />
+      </div>
+      <div className="container mx-auto px-4 py-8 relative sm:-top-[70vh] -top-[30vh]">
+      <div className="relative mx-8 sm:mx-20 md:mx-36 overflow-hidden py-10 sm:py-24 space-y-5 sm:space-y-10">
         <h1 className="sm:text-7xl text-4xl sm:pb-8 pb-4 w-full text-center font-bold mb-4">
           {project.title}
         </h1>
@@ -147,6 +160,8 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ params }) => {
           </a>
         </div>
       </div>
+    </div>
+      <SubContactSection />
     </div>
   );
 };

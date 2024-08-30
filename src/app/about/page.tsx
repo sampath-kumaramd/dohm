@@ -137,7 +137,7 @@ const HowWeWorkSection: React.FC = () => {
             />
           </div>
         </div>
-        <div className="mx-8 sm:mx-[60vh] mt-12 sm:mt-24">
+        <div className="mx-8 sm:mx-[30vw] mt-12 sm:mt-24">
           <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-6 w-full min-h-48 -mt-10 pt-8 sm:pt-20 border-4 border-white border-opacity-70 text-center">
             <h3 className="mx-4 sm:mx-16 text-white text-center text-xl sm:text-3xl font-bold mb-8">
               GET FULL SUPPORT FOR ALL YOUR PROGRAMING NEEDS.
