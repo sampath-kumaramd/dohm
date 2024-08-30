@@ -121,7 +121,7 @@ const ServicesSection: React.FC = () => {
           })`,
         }}
       />
-      <div className="container relative mx-auto px-4">
+      <div className="container relative mx-auto px-4 pb-40">
         <h2 className="sm:text-5xl text-3xl font-bold mb-12 text-center">
           OUR
           <GradientText

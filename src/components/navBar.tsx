@@ -1,23 +1,55 @@
 'use client';
-import React, { useState } from 'react';
+
+import React, { useState, ReactNode } from 'react';
 
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import CustomButton from './customButton';
 
+interface NavLinkProps {
+  href: string;
+  children: ReactNode;
+  onClick?: () => void;
+}
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About us' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/services', label: 'Services' },
+  ];
+
+  const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick }) => {
+    const isActive = pathname === href;
+    return (
+      <Link
+        href={href}
+        className={`${
+          isActive ? 'text-orange' : 'text-charcoal'
+        } hover:text-orange transition-colors`}
+        onClick={onClick}   
+      >
+        <h6>{children}</h6>
+      </Link>
+    );
   };
 
   return (
     <div className="bg-cream-dark">
       <nav className="flex justify-between items-center py-4 px-6 container mx-auto">
         <div className="flex items-center">
+          <Link href="/">
           <Image
             unoptimized
             src="/logo.svg"
@@ -25,21 +57,15 @@ const Navbar = () => {
             className="h-10 w-auto"
             width={400}
             height={400}
-          />
+            />
+            </Link>
         </div>
         <div className="hidden md:flex space-x-16 items-center">
-          <Link href="/" className="text-charcoal hover:text-orange">
-            <h6>Home</h6>
-          </Link>
-          <Link href="/about" className="text-charcoal hover:text-orange">
-            <h6>About us</h6>
-          </Link>
-          <Link href="/projects" className="text-charcoal hover:text-orange">
-            <h6>Projects</h6>
-          </Link>
-          <Link href="/services" className="text-charcoal hover:text-orange">
-            <h6>Services</h6>
-          </Link>
+          {navItems.map((item) => (
+            <NavLink key={item.href} href={item.href}>
+              {item.label}
+            </NavLink>
+          ))}
           <Link href="/contact-us">
             <CustomButton>Contact us</CustomButton>
           </Link>
@@ -77,34 +103,11 @@ const Navbar = () => {
                 height={40}
               />
             </button>
-            <Link
-              href="/"
-              className="text-charcoal hover:text-orange"
-              onClick={toggleMenu}
-            >
-              <h6>Home</h6>
-            </Link>
-            <Link
-              href="/about"
-              className="text-charcoal hover:text-orange"
-              onClick={toggleMenu}
-            >
-              <h6>About us</h6>
-            </Link>
-            <Link
-              href="/projects"
-              className="text-charcoal hover:text-orange"
-              onClick={toggleMenu}
-            >
-              <h6>Projects</h6>
-            </Link>
-            <Link
-              href="/services"
-              className="text-charcoal hover:text-orange"
-              onClick={toggleMenu}
-            >
-              <h6>Services</h6>
-            </Link>
+            {navItems.map((item) => (
+              <NavLink key={item.href} href={item.href} onClick={toggleMenu}>
+                {item.label}
+              </NavLink>
+            ))}
             <Link href="/contact-us" onClick={toggleMenu}>
               <CustomButton>Contact us</CustomButton>
             </Link>

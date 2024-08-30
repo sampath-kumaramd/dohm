@@ -80,8 +80,8 @@ const HeroSection = () => {
                   </div>
                   <div className="flex items-center">
                     <Star className="text-yellow-400 w-4 h-4 mr-1" />
-                    <span className="font-bold mr-1">4.7</span>
-                    <span className="text-gray-600">| 200+</span>
+                    <span className="font-bold mr-1 text-sm sm:font-base">4.7</span>
+                    <span className="text-gray-600 text-sm sm:font-base">| 200+</span>
                   </div>
                 </div>
               </div>
