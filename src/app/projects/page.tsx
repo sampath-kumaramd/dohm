@@ -5,17 +5,66 @@ import CustomCarousel from '@/components/CustomCarousel';
 import ProjectsGrid from '@/components/projectGrid';
 import SubContactSection from '@/components/subContactSection';
 import SubHeroSection from '@/components/subHeroSection';
+import GradientText from '@/components/ui/GradientText';
 import { projectsData, Project } from '@/lib/project-data';
 
 const carouselItems = [
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum mass sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum mass sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.', logo: '' },
-  { name: 'JORDYN CURTIS', image: '/avatars/placeholder.png', description: 'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.', logo: '' },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum mass sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum mass sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
+  {
+    name: 'JORDYN CURTIS',
+    image: '/avatars/placeholder.png',
+    description:
+      'Nulla nibh amet ac augue enim mauris. Nulla massa suspendisse risus nibh hendrerit. A viverra tincidunt sagittis tincidunt. Fermentum massa.',
+    logo: '',
+  },
 ];
 
 const Projects: React.FC = () => {

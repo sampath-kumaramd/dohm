@@ -29,7 +29,7 @@ const HeroSection = () => {
             })`,
           }}
         />
-        <div className="container relative z-10 mx-auto px-4 py-24 min-h-screen">
+        <div className="container relative z-10 mx-auto px-4 py-28 min-h-[100vh]">
           <div className="mx-auto items-center px-4 sm:flex -mt-10">
             <div className="flex-1 sm:pe-20 sm:pr-8 lg:pe-28 xl:pe-40">
               <h1 className="sm:text-6xl text-4xl font-bold mb-4">
@@ -80,13 +80,13 @@ const HeroSection = () => {
                   </div>
                   <div className="flex items-center">
                     <Star className="text-yellow-400 w-4 h-4 mr-1" />
-                    <span className="font-bold mr-1 text-sm sm:font-base">4.7</span>
-                    <span className="text-gray-600 text-sm sm:font-base">| 200+</span>
+                    <span className="font-bold mr-1">4.7</span>
+                    <span className="text-gray-600">| 200+</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 px-6 py-12 flex-1 justify-between sm:mt-0">
+            <div className="mt-8 mb-8 sm:mb-0 px-6 py-12 flex-1 justify-between sm:mt-0">
               <Image
                 unoptimized
                 src="/homepage/hero-illustration.svg"
