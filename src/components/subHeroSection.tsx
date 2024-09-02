@@ -121,7 +121,7 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
               </h1>
             )}
             {subtitle && (
-              <p className="text-xl mb-6 text-gray-500 mx-4 sm:mx-72">
+              <p className="text-xl mb-6 text-gray-500 mx-4 lg:mx-72">
                 {subtitle}
               </p>
             )}

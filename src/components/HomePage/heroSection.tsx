@@ -29,7 +29,7 @@ const HeroSection = () => {
             })`,
           }}
         />
-        <div className="container relative z-10 mx-auto px-4 py-28 min-h-[100vh]">
+        <div className="container relative z-10 mx-auto px-4 py-28 min-h-[170vh] sm:min-h-[100vh]">
           <div className="mx-auto items-center px-4 sm:flex -mt-10">
             <div className="flex-1 sm:pe-20 sm:pr-8 lg:pe-28 xl:pe-40">
               <h1 className="sm:text-6xl text-4xl font-bold mb-4">

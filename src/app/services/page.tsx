@@ -69,7 +69,7 @@ const Service: React.FC = () => {
             backgroundImage: ServiceBG.src,
           }}
         />
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 ">
           <div className="container mx-auto px-4 flex items-center justify-center sm:py-24 py-12">
             <div className="grid grid-cols-1 gap-24">
               {servicesData.map((service, index) => (

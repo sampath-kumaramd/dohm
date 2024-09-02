@@ -74,7 +74,7 @@ const HowWeWorkSection: React.FC = () => {
           })`,
         }}
       />
-      <div className="relative container mx-auto px-4 min-h-[70vh]">
+      <div className="relative container mx-auto px-4 min-h-[80vh]">
         <h2 className="sm:text-5xl text-3xl font-bold text-white text-center mb-16 sm:mt-40 mt-12">
           HOW WE WORK?
         </h2>

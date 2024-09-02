@@ -51,7 +51,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <div
             className={`
           mt-4 sm:mt-0 ${isIconLeft ? 'sm:ms-20' : 'sm:me-20'} sm:px-36 p-8 rounded-lg shadow-lg transition-all duration-300 w-full
-          ${isHovered ? 'bg-none shadow-none' : 'bg-gray-200'}
+          ${isHovered ? 'bg-none shadow-none' : 'bg-[#f7f7f7]'}
         `}
           >
             <div className=" space-y-5 sm:space-y-5 pt-10 sm:pt-0 text-center sm:text-left">
