@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
+
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -82,6 +83,7 @@ const HowWeWorkSection: React.FC = () => {
     // Clean up event listener on component unmount
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
   return (
     <div className="h-auto">
       <SubHeroSection

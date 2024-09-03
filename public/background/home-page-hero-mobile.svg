@@ -1,18 +1,12 @@
-<svg width="375" height="839" viewBox="0 0 375 839" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="375" height="788" fill="#FAF0E6"/>
-<g filter="url(#filter0_f_2015_1395)">
-<circle cx="188" cy="285" r="72" fill="#E39B30"/>
-</g>
-<path d="M43.7611 819.117C77.6667 814.098 112.071 795.026 145.976 799.711C180.381 804.729 214.785 833.504 248.69 838.188C283.094 843.207 317 823.801 351.404 811.756C359.245 808.97 367.112 806.203 375 803.594V788H351.404H248.69H145.976H43.7611H0V809.81C13.5847 816.309 28.6246 821.177 43.7611 819.117Z" fill="#FAF0E6"/>
+<svg width="375" height="313" viewBox="0 0 375 313" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="375" height="262" fill="#FAF0E6"/>
 <g opacity="0.2">
-<path d="M218.75 188.551L236.966 157L255.182 188.551H218.75Z" stroke="#D06D01" stroke-width="2"/>
-<path d="M205.555 186.274L237.374 168.529L236.832 204.957L205.555 186.274Z" stroke="#ECB349" stroke-width="2"/>
+<path d="M279.75 114.551L297.966 83L316.182 114.551H279.75Z" stroke="#D06D01" stroke-width="2"/>
+<path d="M266.555 112.274L298.374 94.5294L297.832 130.957L266.555 112.274Z" stroke="#ECB349" stroke-width="2"/>
 </g>
-<defs>
-<filter id="filter0_f_2015_1395" x="-84" y="13" width="544" height="544" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_2015_1395"/>
-</filter>
-</defs>
+<g opacity="0.2">
+<path d="M32.7497 240.551L50.9656 209L69.1816 240.551H32.7497Z" stroke="#D06D01" stroke-width="2"/>
+<path d="M19.5555 238.274L51.3739 220.529L50.832 256.957L19.5555 238.274Z" stroke="#ECB349" stroke-width="2"/>
+</g>
+<path d="M43.7611 293.117C77.6667 288.098 112.071 269.026 145.976 273.711C180.381 278.729 214.785 307.504 248.69 312.188C283.094 317.207 317 297.801 351.404 285.756C359.245 282.97 367.112 280.203 375 277.594V262H351.404H248.69H145.976H43.7611H0V283.81C13.5847 290.309 28.6246 295.177 43.7611 293.117Z" fill="#FAF0E6"/>
 </svg>

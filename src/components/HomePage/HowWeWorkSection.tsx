@@ -80,16 +80,16 @@ const HowWeWorkSection: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   return (
-    <section className="py-16 relative">
+    <section className="py-16 relative overflow-hidden">
       <div
-        className="absolute inset-0 z-0 bg-cover bg-right w-full bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center w-full bg-no-repeat"
         style={{
           backgroundImage: `url(${
             isMobile ? homePageHowWeWorkMobileBg.src : homePageHowWeWorkBg.src
           })`,
         }}
       />
-      <div className="relative container mx-auto px-4 min-h-[80vh]">
+      <div className="relative container mx-auto px-4 sm:min-h-[80vh] min-h-[140vh]">
         <h2 className="sm:text-5xl text-3xl font-bold text-white text-center mb-16 sm:mt-40 mt-12">
           HOW WE WORK?
         </h2>
