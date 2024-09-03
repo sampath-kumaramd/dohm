@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
@@ -9,7 +9,22 @@ import ContactInfoSectionBackgroundMobile from '../../public/background/contact-
 import ContactInfoSectionBackground from '../../public/background/contact-info-section-background.svg';
 
 const SubContactSection: React.FC = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on initial load
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   return (
     <section className="relative min-h-[50vh]">
       <div

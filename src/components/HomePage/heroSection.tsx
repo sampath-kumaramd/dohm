@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { Star } from 'lucide-react';
 import Image from 'next/image';
@@ -12,7 +12,22 @@ import ScrollIndicator from '../scrollIndicator';
 import GradientText from '../ui/GradientText';
 
 const HeroSection = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on initial load
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const nextSectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToNextSection = () => {
