@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 flex-grow flex items-center">
         <div className="w-full flex flex-col sm:flex-row items-center">
           <div className="w-full sm:w-1/2 sm:pr-8 lg:pr-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 mt-12 sm:mt-0">
               <span className="text-charcoal">WE BUILD</span>
               <br />
               <GradientText gradientColors={['#d57a0e', '#e49f34']}>
@@ -106,7 +106,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 mt-8 sm:mt-0">
+          <div className="w-full sm:w-1/2 mt-8 sm:mt-0  mb-96 sm:mb-0 ">
             <Image
               unoptimized
               src="/homepage/hero-illustration.svg"

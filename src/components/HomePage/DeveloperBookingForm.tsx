@@ -199,10 +199,10 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
         alt="Form Background"
         width={400}
         height={400}
-        className="absolute sm:left-96 sm:-top-10"
+        className="absolute md:left-96 md:-top-10"
       />
-      <div className="relative grid sm:grid-cols-8 grid-cols-1 justify-between p-8 sm:gap-36 gap-16 min-h-[50vh] container">
-        <div className="sm:col-span-4 items-center flex">
+      <div className="relative grid md:grid-cols-8 grid-cols-1 justify-between p-8 md:gap-36 gap-16 min-h-[50vh] container">
+        <div className="md:col-span-4 items-center flex">
           <div className="w-full">
             {showSelectionButtons && (
               <div className="inline-flex mb-4 bg-white p-3 rounded-full shadow-md shadow-gray-200">
@@ -231,7 +231,7 @@ const DeveloperBookingForm: React.FC<DeveloperBookingFormProps> = ({
             {renderContent()}
           </div>
         </div>
-        <Card className=" sm:col-span-4 bg-gradient-to-br from-orange-light to-orange-lighter text-white  mx-auto  rounded-3xl">
+        <Card className=" md:col-span-4 bg-gradient-to-br from-orange-light to-orange-lighter text-white  mx-auto  rounded-3xl">
           <CardContent className=" py-10">
             <Form {...form}>
               <form
