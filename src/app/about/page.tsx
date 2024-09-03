@@ -1,7 +1,6 @@
 'use client';
 import React, { use, useEffect, useState } from 'react';
 
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
@@ -125,7 +124,7 @@ const HowWeWorkSection: React.FC = () => {
         }}
         imageOnLeft={true}
       />
-      <section className="py-16 relative h-[120vh] sm:h-[360vh]">
+      <section className="py-16 relative sm:h-[120vh] h-[360vh]">
         <div
           className="absolute inset-0 z-0 bg-cover bg-right w-auto bg-no-repeat"
           style={{
