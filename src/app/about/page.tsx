@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { use, useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -66,7 +66,23 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
 );
 
 const HowWeWorkSection: React.FC = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on initial load
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div className="h-auto">
       <SubHeroSection

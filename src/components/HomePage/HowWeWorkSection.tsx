@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
@@ -63,18 +63,33 @@ const HowWeWorkSection: React.FC = () => {
     },
   ];
 
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on initial load
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   return (
-    <section className="py-16 relative">
+    <section className="py-16 relative overflow-hidden">
       <div
-        className="absolute inset-0 z-0 bg-cover bg-right w-full bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center w-full bg-no-repeat"
         style={{
           backgroundImage: `url(${
             isMobile ? homePageHowWeWorkMobileBg.src : homePageHowWeWorkBg.src
           })`,
         }}
       />
-      <div className="relative container mx-auto px-4 min-h-[80vh]">
+      <div className="relative container mx-auto px-4 sm:min-h-[80vh] min-h-[140vh]">
         <h2 className="sm:text-5xl text-3xl font-bold text-white text-center mb-16 sm:mt-40 mt-12">
           HOW WE WORK?
         </h2>
