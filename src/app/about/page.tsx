@@ -124,46 +124,54 @@ const HowWeWorkSection: React.FC = () => {
         }}
         imageOnLeft={true}
       />
-      <section className="py-16 relative sm:h-[120vh] h-[360vh]">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-right w-auto bg-no-repeat"
-          style={{
-            backgroundImage: `url(${
-              isMobile ? HowWeWorksBgMobile.src : HowWeWorksBg.src
-            })`,
-          }}
+      <div className=" relative">
+        <Image
+          src="background/how-we-works-header.svg"
+          alt="Background"
+          height={400}
+          width={400}
+          className="w-full absolute top-0"
         />
-        <div className="relative container mx-auto px-4 sm:min-h-screen">
-          <h2 className="text-4xl sm:text-6xl font-bold text-white text-center py-6 mt-12 sm:mt-24 sm:py-24">
-            HOW WE WORK?
-          </h2>
-          <div className="flex justify-center items-center w-full">
-            <Image
-              unoptimized
-              src={
-                isMobile
-                  ? '/aboutUsPage/how-we-works-illustration-mobile.svg'
-                  : '/aboutUsPage/how-we-works-illustration.svg'
-              }
-              alt="Hero Illustration"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
+        <section className="py-16   bg-gradient-to-r from-orange to-orange-lighter">
+          <div className=" container mx-auto px-4 sm:min-h-screen">
+            <h2 className="text-4xl sm:text-6xl font-bold text-white text-center py-6 mt-12 sm:mt-24 sm:py-24">
+              HOW WE WORK?
+            </h2>
+            <div className="flex justify-center items-center w-full">
+              <Image
+                unoptimized
+                src={
+                  isMobile
+                    ? '/aboutUsPage/how-we-works-illustration-mobile.svg'
+                    : '/aboutUsPage/how-we-works-illustration.svg'
+                }
+                alt="Hero Illustration"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </div>
           </div>
-        </div>
-        <div className=" mx-8 sm:mx-[30vw] mt-12 sm:mt-24">
-          <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-6 w-full min-h-48 -mt-10 pt-8 sm:pt-20 border-4 border-white border-opacity-70 text-center">
-            <h3 className="mx-4 sm:mx-16 text-white text-center text-xl sm:text-3xl font-bold mb-8">
-              GET FULL SUPPORT FOR ALL YOUR PROGRAMING NEEDS.
-            </h3>
-            <button className="bg-charcoal text-white font-bold py-4 w-full sm:w-auto px-8 rounded-full hover:bg-gray-800 transition-colors duration-300 border-white border-2 cursor-pointer inline-block">
-              <Link href="/contact-us">Contact us</Link>
-            </button>
+          <div className=" mx-8 sm:mx-[30vw] mt-12 sm:mt-24 mb-40">
+            <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-6 w-full min-h-48 -mt-10 pt-8 sm:pt-20 border-4 border-white border-opacity-70 text-center">
+              <h3 className="mx-4 sm:mx-16 text-white text-center text-xl sm:text-3xl font-bold mb-8">
+                GET FULL SUPPORT FOR ALL YOUR PROGRAMING NEEDS.
+              </h3>
+              <button className="bg-charcoal text-white font-bold py-4 w-full sm:w-auto px-8 rounded-full hover:bg-gray-800 transition-colors duration-300 border-white border-2 cursor-pointer inline-block">
+                <Link href="/contact-us">Contact us</Link>
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <Image
+          src="background/how-we-works-footer.svg"
+          alt="Background"
+          height={400}
+          width={400}
+          className="w-full absolute -bottom-1 "
+        />
+      </div>
       <section className="py-28 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">

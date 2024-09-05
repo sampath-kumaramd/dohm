@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 
-import homePageHowWeWorkMobileBg from '../../../public/background/home-page-how-we-work-mobile.svg';
-import homePageHowWeWorkBg from '../../../public/background/home-page-how-we-work.svg';
+import homePageFooterBg from '../../../public/background/how-we-works-footer.svg';
+import howWeWorkHeaderBg from '../../../public/background/how-we-works-header.svg';
 
 interface WorkStepProps {
   icon: string;
@@ -80,42 +80,51 @@ const HowWeWorkSection: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   return (
-    <section className="py-16 relative overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center w-full bg-no-repeat"
-        style={{
-          backgroundImage: `url(${
-            isMobile ? homePageHowWeWorkMobileBg.src : homePageHowWeWorkBg.src
-          })`,
-        }}
+    <div className=" relative ">
+      <Image
+        src="background/how-we-works-header.svg"
+        alt="Background"
+        height={400}
+        width={400}
+        className="w-full absolute -top-1 "
       />
-      <div className="relative container mx-auto px-4 sm:min-h-[80vh] min-h-[140vh]">
-        <h2 className="sm:text-5xl text-3xl font-bold text-white text-center mb-16 sm:mt-40 mt-12">
-          HOW WE WORK?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:mx-0 mx-4 gap-8 mb-16">
-          {steps.map((step, index) => (
-            <WorkStep
-              key={index}
-              icon={step.icon}
-              title={step.title}
-              description={step.description}
-              isLast={index === steps.length - 1}
-            />
-          ))}
+      <section className="py-16 bg-gradient-to-r from-orange to-orange-lighter">
+        <div className="container mx-auto px-4 ">
+          <h2 className="sm:text-5xl text-3xl font-bold text-white text-center mb-16 sm:mt-40 mt-12">
+            HOW WE WORK?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:mx-0 mx-4 gap-8 mb-16">
+            {steps.map((step, index) => (
+              <WorkStep
+                key={index}
+                icon={step.icon}
+                title={step.title}
+                description={step.description}
+                isLast={index === steps.length - 1}
+              />
+            ))}
+          </div>
+          <div className="text-center mb-40">
+            <Link
+              to="developer-booking-form"
+              smooth={true}
+              duration={500}
+              className="bg-charcoal text-white font-bold py-4 px-8 rounded-full hover:bg-gray-800 transition-colors duration-300 border-white border-2 cursor-pointer inline-block"
+            >
+              Contact us
+            </Link>
+          </div>
         </div>
-        <div className="text-center">
-          <Link
-            to="developer-booking-form"
-            smooth={true}
-            duration={500}
-            className="bg-charcoal text-white font-bold py-4 px-8 rounded-full hover:bg-gray-800 transition-colors duration-300 border-white border-2 cursor-pointer inline-block"
-          >
-            Contact us
-          </Link>
-        </div>
-      </div>
-    </section>
+      </section>
+
+      <Image
+        src="background/how-we-works-footer.svg"
+        alt="Background"
+        height={400}
+        width={400}
+        className="w-full absolute -bottom-1 "
+      />
+    </div>
   );
 };
 

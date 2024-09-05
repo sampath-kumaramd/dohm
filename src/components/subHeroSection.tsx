@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import { Button } from '@/components/ui/button';
 
+import backgorundImage from '../../public/background/background-image-footer.svg';
 import mobileBg from '../../public/background/sub-hero-section-page-mobile.svg';
 import desktopBg from '../../public/background/sub-hero-section-page.svg';
 
@@ -113,68 +114,79 @@ const SubHeroSection: React.FC<SubHeroSectionProps> = ({
   };
 
   return (
-    <section className="relative overflow-hidden min-h-screen bg-cream-100">
-      {/* Background Image */}
-      <Image
-        src={isMobile ? mobileBg : desktopBg}
-        alt="Background"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        priority
-      />
+    <div className=" relative ">
+      <section className="relative overflow-hidden  bg-cream-100 bg-[#faf0e6]">
+        {/* Background Image */}
+        <Image
+          src={isMobile ? mobileBg : desktopBg}
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+        />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-16 flex items-center min-h-screen">
-        <div className="max-w-3xl mx-auto text-center">
-          {title && (
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-              {title.reverseColors ? (
-                <>
-                  {renderWord(title.secondWord)} {renderWord(title.firstWord)}
-                </>
-              ) : (
-                <>
-                  {renderWord(title.firstWord)} {renderWord(title.secondWord)}
-                </>
-              )}
-            </h1>
-          )}
-          {subtitle && <p className="text-xl mb-8 text-gray-600">{subtitle}</p>}
-          {content && <div className="mb-8">{content}</div>}
-          {buttons && buttons.length > 0 && (
-            <div className="flex flex-wrap gap-4 mb-8 justify-center">
-              {buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  variant={button.variant}
-                  onClick={() => handleButtonClick(button.action)}
-                >
-                  {button.text}
-                </Button>
-              ))}
-            </div>
-          )}
-          {tabs && tabs.length > 0 && (
-            <div className="flex flex-wrap gap-4 justify-center">
-              {tabs.map((tab, index) => (
-                <button
-                  key={index}
-                  className={`px-4 py-2 rounded-full ${
-                    tab.active
-                      ? 'bg-gradient-to-r from-orange-500 to-orange-400 text-white'
-                      : 'bg-white text-gray-800'
-                  }`}
-                  onClick={() => handleTabClick(tab.text)}
-                >
-                  {tab.text}
-                </button>
-              ))}
-            </div>
-          )}
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-36 flex items-center ">
+          <div className="max-w-3xl mx-auto text-center py-24">
+            {title && (
+              <h1 className="text-4xl sm:text-6xl font-bold mb-6">
+                {title.reverseColors ? (
+                  <>
+                    {renderWord(title.secondWord)} {renderWord(title.firstWord)}
+                  </>
+                ) : (
+                  <>
+                    {renderWord(title.firstWord)} {renderWord(title.secondWord)}
+                  </>
+                )}
+              </h1>
+            )}
+            {subtitle && (
+              <p className="text-xl mb-8 text-gray-600">{subtitle}</p>
+            )}
+            {content && <div className="mb-8">{content}</div>}
+            {buttons && buttons.length > 0 && (
+              <div className="flex flex-wrap gap-4 mb-8 justify-center">
+                {buttons.map((button, index) => (
+                  <Button
+                    key={index}
+                    variant={button.variant}
+                    onClick={() => handleButtonClick(button.action)}
+                  >
+                    {button.text}
+                  </Button>
+                ))}
+              </div>
+            )}
+            {tabs && tabs.length > 0 && (
+              <div className="flex flex-wrap gap-4 justify-center">
+                {tabs.map((tab, index) => (
+                  <button
+                    key={index}
+                    className={`px-4 py-2 rounded-full ${
+                      tab.active
+                        ? 'bg-gradient-to-r from-orange-500 to-orange-400 text-white'
+                        : 'bg-white text-gray-800'
+                    }`}
+                    onClick={() => handleTabClick(tab.text)}
+                  >
+                    {tab.text}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Image
+        src={backgorundImage}
+        alt="Background"
+        height={400}
+        width={400}
+        className="w-full absolute -bottom-1 "
+      />
+    </div>
   );
 };
 
